@@ -1,0 +1,46 @@
+/* Selector is just typing the name of the element type so h1, h2, h3, ol, li, etc. 
+
+for a class you use .
+
+body {
+    background-color: red !important;     <--- pro tip for seeing if it's linked correctly
+}
+
+*/
+
+
+@keyframes pulse {
+    0% {transform: scale(1); box-shadow: 0 0 20 0.3 rgb(75, 0, 75); }
+    25% {transform: scale(1); box-shadow: 0 0 20 0.3 rgb(100, 20, 100);}
+    50% {transform: scale(1.05); box-shadow: 0 0 20 0.3 rgb(125, 20, 125)}
+    75% {transform: scale(1.10); box-shadow: 0 0 20 0.3 rgb(150, 20, 150)}
+    100% {transform: scale(1.15); box-shadow: 0 0 20 0.3 rgb(175, 20, 175)}
+
+}
+
+body {
+    background: linear-gradient(to right, red, white);
+    background-repeat: no-repeat;
+    min-height: 100vh
+}
+
+.header {
+    font-weight: bold;
+    color: blue;
+    border: 10px dotted salmon;
+    text-align: center;
+}
+
+.header2 {
+    font-weight: bold;
+    color: lime;
+    border: 20px dashed;
+    text-align: center;
+}
+
+.my-button {
+    animation: pulse 4s infinite;
+    background: linear-gradient(to right, black, white);
+    color: linear-gradient(to left, black, white);
+
+}

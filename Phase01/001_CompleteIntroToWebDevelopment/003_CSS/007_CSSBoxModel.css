@@ -1,0 +1,71 @@
+/*divs are display: block and span is display: inline by default.
+in-line - flows like text.
+block - gives height and width and will take their own line.
+inline-block - will flow like text but have width and height.
+flex - talk about this in the future
+inline-flex - talk about this in the future
+grid and inline-gride - in the future
+table - sometimes acts like a table.
+
+
+****** Note that pixels will generally stay fixed while percentages can change ****** 
+
+We can manipulate this differently later on.
+*/
+
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(to right, purple, orange, yellow);
+    min-height: 100vh;
+}
+
+.box {
+    border-style: double; /* you can style all four sides*/
+    width: 200px; /*Width of the box container*/
+    height: 200px; /*height of the box container*/
+    text-align: center; /*center alignment of the text*/
+    justify-content: center; /*center justification of the content*/
+    align-items: center; /*center alignment of items*/
+    display: flex; /*flex display causes the text to be in the middle of the box*/
+    border-radius: 5%; /*rounds the corners*/
+    margin: 10px /*separates the boxes*/
+}
+
+.outer-box{
+    background: blue;
+    width: 400px;
+    height: 50px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: solid black 3px;
+}
+
+.main-box{
+    background: white;
+    width: 300px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: dotted red 5px    
+}
+
+.inner-box{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 20 px;
+    justify-content: center;
+    background: lime;
+    margin: 200px;
+    
+}
