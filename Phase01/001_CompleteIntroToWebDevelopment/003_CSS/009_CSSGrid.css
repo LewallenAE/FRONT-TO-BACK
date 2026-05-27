@@ -1,0 +1,70 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+body {
+    background: linear-gradient(to right, blue, green, red)
+}
+section {
+    width: 90%;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.box-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1.5fr 1fr;
+    grid-template-areas:
+    "nav-header nav-header nav-header nav-side"
+    "main-body main-body the-inner-body nav-side"
+    "the-footer the-footer the-footer the-footer";
+}
+
+
+.the-header {
+    grid-area: nav-header;
+    background-color: red;
+    padding: 10px;
+    height: 100px;
+}
+
+.the-body {
+    grid-area: main-body;
+    background-color: slateblue;
+    padding: 10px;
+    height: 600px;
+}
+
+.the-inner-body {
+    grid-area: the-inner-body;
+    background-color: purple;
+    height: 600px;
+
+}
+.the-sidebar {
+    grid-area: nav-side;
+    background-color: green;
+    padding: 10px;
+}
+
+.the-footer {
+    grid-area: the-footer;
+    background-color: lime;
+    padding: 10px;
+}

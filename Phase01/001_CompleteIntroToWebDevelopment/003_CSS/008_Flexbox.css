@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    background: linear-gradient(to right, red, purple);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.parent-container {
+    background: black;
+    display: flex;
+    width: 100%;
+    border: groove lime;
+    justify-content: center;
+}
+.child-container {
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 2rem;
+    border: dotted red 5px;
+    margin: 10px
+}
+
+.two {
+    color: blue;
+    font-weight: bold;
+    padding: 2rem;
+    border: lime 7px dotted;
+    margin: 10px;
+}
+
+.three {
+    color: red;
+    font-weight: bold;
+    padding: 2rem;
+    border: forestgreen 10px dotted;
+    margin: 10px
+}

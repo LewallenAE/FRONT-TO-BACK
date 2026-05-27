@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.gameboard {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.invader {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-size: 2rem;
+    animation: invaderDescent 5s infinite linear;
+}
+
+.space-ship {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 50px;
+    animation: shipMove 6s infinite ease-in-out;
+}
+
+.missile {
+    position: absolute;
+    bottom: 70px;
+    width: 25px;
+    left: 12px;
+    font-size: 1.5rem;    
+    animation: 
+        shipMove 6s infinite linear,
+        missileBarrage 0.85s infinite linear;
+}
+
+@keyframes invaderDescent {
+    /* ROW 1: Slide Right */
+    0%   { left: 0;    top: 20px; }
+    12%  { left: 90%;  top: 20px; } /* Hits right wall */
+    
+    /* DROP 1 */
+    15%  { left: 90%;  top: 90px; } /* Drops down */
+    
+    /* ROW 2: Slide Left */
+    27%  { left: 0;    top: 90px; } /* Hits left wall */
+    
+    /* DROP 2 */
+    30%  { left: 0;    top: 160px; }
+    
+    /* ROW 3: Slide Right */
+    42%  { left: 90%;  top: 160px; }
+    
+    /* DROP 3 */
+    45%  { left: 90%;  top: 230px; }
+    
+    /* ROW 4: Slide Left */
+    57%  { left: 0;    top: 230px; }
+    
+    /* DROP 4: Taking him further down! */
+    60%  { left: 0;    top: 300px; }
+    
+    /* ROW 5: Slide Right */
+    72%  { left: 90%;  top: 300px; }
+    
+    /* DROP 5: Dropping deep into the board */
+    75%  { left: 90%;  top: 370px; }
+    
+    /* ROW 6: Final slide left across the bottom zone */
+    92%  { left: 0;    top: 370px; }
+    
+    /* RESET: Vanish and teleport back to the start */
+    100% { left: 0;    top: 20px; } 
+}
+
+@keyframes shipMove {
+    0%, 100% { left: 10%; }
+    40% { left: 80%; }
+    70% { left: 40%}
+}
+
+@keyframes missileBarrage {
+    0% {
+        bottom: 70px;   /* Start at the ship nose */
+        opacity: 1;
+    }
+    90% {
+        bottom: 580px;  /* Shoot to the top of the gameboard */
+        opacity: 1;
+    }
+    95%, 100% {
+        bottom: 580px;
+        opacity: 0;     /* Instant vanish at the ceiling and reset */
+    }
+}
