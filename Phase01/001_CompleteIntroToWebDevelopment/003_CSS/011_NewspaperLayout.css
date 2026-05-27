@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+
+.article-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-areas:
+    "paper-name paper-name paper-name"
+    "nav-bar nav-bar nav-bar"
+    "outer-body-left main-body outer-body-right"
+    "footer footer footer";
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    gap: 10px;
+
+}
+
+.paper-name {
+    grid-area: paper-name;
+    font-family: 'Style Script', cursive;
+    word-spacing: 20px;
+    text-align: center;
+    border: 5px solid  black;
+
+}
+
+img {
+    width: 33%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+    background: blue;
+    align-items: center;
+    text-align: center;
+    font-size: 1.25rem;
+    word-spacing: 10px;
+    color: white;
+
+}
+
+.outer-body-left {
+    grid-area: outer-body-left;
+    background: green;
+    
+}
+
+.main-body {
+    grid-area: main-body;
+    background: red;
+}
+
+.outer-body-right {
+    grid-area: outer-body-right;
+    background: purple
+}
+
+.footer {
+    grid-area: footer;
+    background: slateblue
+}
