@@ -26,6 +26,11 @@ html {
 
 }
 
+.coffee-masters-logo {
+    height: 25px;
+    
+}
+
 .items {
     grid-column: 1/2;
     grid-row: 1/4;
