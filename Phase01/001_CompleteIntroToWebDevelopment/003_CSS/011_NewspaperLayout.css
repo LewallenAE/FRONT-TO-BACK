@@ -16,10 +16,10 @@ html {
     "outer-body-left main-body outer-body-right"
     "footer footer footer";
     width: 90%;
-    margin: 0 auto;
     overflow: hidden;
-    gap: 10px;
-
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .paper-name {
@@ -27,44 +27,62 @@ html {
     font-family: 'Style Script', cursive;
     word-spacing: 20px;
     text-align: center;
-    border: 5px solid  black;
-
 }
 
 img {
-    width: 33%;
+    width: 95%;
     height: auto;
     object-fit: cover;
 }
 
 .nav-bar {
     grid-area: nav-bar;
-    background: blue;
+    background: white;
     align-items: center;
     text-align: center;
     font-size: 1.25rem;
     word-spacing: 10px;
-    color: white;
-
+    color: black;
+    border: solid black 2px;
 }
 
 .outer-body-left {
     grid-area: outer-body-left;
-    background: green;
-    
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-left: solid black 2px;
 }
 
 .main-body {
     grid-area: main-body;
-    background: red;
+    height: 100%;
+    border-right: solid black 2px;
+    border-left: solid black 2px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .outer-body-right {
     grid-area: outer-body-right;
-    background: purple
+    border-right: solid black 2px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer {
+.footer-heading {
     grid-area: footer;
-    background: slateblue
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border: solid black 2px;
+    border-top: solid black 2px;
 }
+
