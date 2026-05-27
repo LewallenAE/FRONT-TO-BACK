@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.cm-container {
+    width: 95%;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.banner {
+    text-align: center;
+    background: black;
+    color: #C2A48C;
+
+}
+
+.items {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #fbf0e8;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #fbf0e8;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.payment {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #fbf0e8;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.subtotal, .tax, .total {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.total {
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+}
+
+.subtotal-price, .tax-price, .total-price {
+    margin: 0;
+}
+
+.place-order {
+    grid-column: 1 / 3; /* Span all the way across */
+    background-color: #b99370; /* The tan button color */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px; /* Makes it a pill shape */
+    cursor: pointer;
+    max-width: 600px;
+    margin: 20px auto 0 auto; /* Centers it and gives it space on top */
+}
