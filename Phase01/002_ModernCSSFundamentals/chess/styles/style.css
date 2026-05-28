@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1, h2 {
+    color: goldenrod;
+}
+
+a {
+    color: goldenrod;
+}
+
+.lede {
+    font-size: 21px;
+}
