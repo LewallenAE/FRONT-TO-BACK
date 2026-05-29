@@ -47,7 +47,17 @@ main {
 }
 
 h1 {
+    font-family: var(--ff-accent);
     font-size: var(--fs-300);
+}
+h1 > span {
+    color: var(--clr-custom-gold);
+}
+
+h1 > p > span {
+    color: var(--clr-custom-gold);
+    font-family: var(--ff-accent);
+    font-size: var(--fs-400);
 }
 
 h2 {
@@ -57,22 +67,32 @@ h2 {
     line-height: 1.1;
 }
 
-h3 {
-    font-size: var(--fs-250);
-}
-
-h1 > p > span {
-    color: var(--clr-custom-gold);
-    font-family: var(--ff-accent);
-    font-size: var(--fs-400);
-}
-
 h2 > span {
     color: var(--clr-custom-black);
 }
 
+h3 {
+    font-size: var(--fs-250);
+}
+
 a {
-    color: var(--clr-custom-gold);
+    color: var(--clr-custom-black);
+}
+
+a:hover, a:focus-visible {
+    color: rebeccapurple;
+}
+
+.chess-button {
+    background: var(--clr-custom-gold);
+    border: none;
+    display: inline-block;
+    font-size: .9em;
+    margin: 40px;
+    max-width: 90%;
+    padding: 0.5em 1.5em;    
+    overflow: hidden;
+    
 }
 
 p {
@@ -83,17 +103,36 @@ p > span {
     font-size: var(--fs-200);
 }
 
-a:hover, a:focus-visible {
-    color: rebeccapurple;
+/*image */
+.chess { 
+    max-inline-size: 85%;
 }
 
-.chess {
-    max-inline-size: 300px;
+.learn-chess {
+    background: var(--clr-custom-gold);
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.learn-chess-content {
+    background: var(--clr-custom-white);
+    overflow: hidden;
 }
 
 .lede {
     font-size: var(--fs-200);
+    padding: 30px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
