@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Overlock";
+    src:
+    url("../../../002_ModernCSSFundamentals/chess/fonts/Overlock-Regular.ttf");
+}
+
+main {
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+
+}
+.header {
+    font-family: Overlock, system-ui, sans-serif;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    justify-content: center;
+    padding: 75px;
+}
+
+.square {
+    align-items: center;
+    background: rgb(147, 241, 203);
+     cursor: pointer;
+    display: flex;
+    border: solid black;
+    justify-content: center;
+    text-align: center;
+}
+
+.square:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.square:nth-child(-n+3) {
+    border-top:none;
+}
+
+.square:nth-child(3n+1) {
+    border-left: none;
+}
+
+.square:nth-child(3n) {
+    border-right: none;
+}
