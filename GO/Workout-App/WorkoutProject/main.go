@@ -4,11 +4,15 @@ import (
 	"net/http"
 	"time"
 	"fmt"
+	"flag"
 	"github.com/LewallenAE/WorkoutApp/Internal/app"
 )
 
 // Beginning of main()
 func main() {
+	var port int
+	flag.IntVar(&port, "port", 8080, "go backend server port")
+	flag.Parse()
 	app, err := app.NewApplication()
 	if err != nil {
 		panic(err)
@@ -19,7 +23,7 @@ func main() {
 	// Declare Server
 	http.HandleFunc("/health", HealthCheck)
 	server := &http.Server{
-		Addr:        ":8080",
+		Addr:        fmt.Sprintf(":%d", port),
 		IdleTimeout: time.Minute,
 		ReadTimeout: 10 * time.Second,
 		WriteTimeout: 30 * time.Second,
