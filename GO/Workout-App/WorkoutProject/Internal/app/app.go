@@ -21,5 +21,5 @@ func NewApplication() (*Application, error) {
 
 	// (app, error)
 	return app, nil
-	
+
 }

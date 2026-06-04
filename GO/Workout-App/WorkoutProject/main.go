@@ -1,10 +1,11 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	"net/http"
 	"time"
-	"fmt"
-	"flag"
+
 	"github.com/LewallenAE/WorkoutApp/Internal/app"
 )
 
@@ -23,9 +24,9 @@ func main() {
 	// Declare Server
 	http.HandleFunc("/health", HealthCheck)
 	server := &http.Server{
-		Addr:        fmt.Sprintf(":%d", port),
-		IdleTimeout: time.Minute,
-		ReadTimeout: 10 * time.Second,
+		Addr:         fmt.Sprintf(":%d", port),
+		IdleTimeout:  time.Minute,
+		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 30 * time.Second,
 	}
 

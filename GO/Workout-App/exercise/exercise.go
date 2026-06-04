@@ -1,6 +1,7 @@
 package exercise
 
 import "fmt"
+
 // create player struct name and inventory
 // inventory is a slice of item
 // create item struct name and type
@@ -15,7 +16,7 @@ type Item struct {
 }
 
 type Player struct {
-	Name string
+	Name      string
 	Inventory map[string]Item
 }
 
@@ -28,9 +29,9 @@ func (p *Player) DropItem(itemName string) {
 	_, exists := p.Inventory[itemName]
 
 	if exists {
-	delete(p.Inventory, itemName)
-	fmt.Printf("%s threw %s item away.\n", p.Name, itemName)
-	return
+		delete(p.Inventory, itemName)
+		fmt.Printf("%s threw %s item away.\n", p.Name, itemName)
+		return
 	} else {
 		fmt.Printf("%s, does not have %s to throw away!\n", p.Name, itemName)
 		return
