@@ -1,6 +1,8 @@
 package app
 
 import (
+	"fmt"
+	"net/http"
 	"log"
 	"os"
 )
@@ -21,5 +23,10 @@ func NewApplication() (*Application, error) {
 
 	// (app, error)
 	return app, nil
+
+}
+
+func (a *Application) HealthCheck(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprint(w, "Status is available.")
 
 }
